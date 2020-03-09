@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Class to model the play of the game
  *
@@ -5,12 +7,17 @@
  */
 public class GameModel {
 
+    private int [][] mGameBoard;
+    final int BLACK = 1;
+    final int WHITE = -1;
+
     /**
      * Construct a game with given sizexsize
      * @param sz the square size of the board
      */
     public GameModel(int sz) {
-
+        mGameBoard = new int[sz][sz];
+        Arrays.fill(mGameBoard, 0);
     }
 
 
@@ -22,8 +29,10 @@ public class GameModel {
      */
     public boolean canPlay(int row, int col) {
 
-        //placeholder
-        return true;
+        if(mGameBoard[row][col] == 0)
+            return true;
+
+        return false;
     }
 
     /**
@@ -35,9 +44,13 @@ public class GameModel {
      */
     public boolean makePlay(int row, int col, int player) {
 
-        //placeholder
+        //fill the spot with the current player's number
+        mGameBoard[row][col] = player;
+        int [] openList = new int[];
+
         return false;
     }
+
 
 
     /**
