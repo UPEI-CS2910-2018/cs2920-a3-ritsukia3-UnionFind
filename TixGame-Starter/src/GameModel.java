@@ -8,6 +8,7 @@ import java.util.Arrays;
 public class GameModel {
 
     private int [][] mGameBoard;
+    private int [] mId;
     final int BLACK = 1;
     final int WHITE = -1;
 
@@ -46,12 +47,9 @@ public class GameModel {
 
         //fill the spot with the current player's number
         mGameBoard[row][col] = player;
-        int [] openList = new int[];
 
         return false;
     }
-
-
 
     /**
      * Print the board to console - perhaps you want this for debugging
