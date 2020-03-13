@@ -122,9 +122,10 @@ public class GameModel {
     }
 
     /**
+     *  Find an parent index connected to a given index node
      *
-     * @param p
-     * @return
+     * @param p     an index of the board
+     * @return      the id of p
      */
     private int find(int p) {
         while (p != id[p]) {
@@ -136,9 +137,10 @@ public class GameModel {
     }
 
     /**
+     * Change the root of either p or q to point to the root of the other
      *
-     * @param p
-     * @param q
+     * @param p     an index of the board
+     * @param q     another index of the board
      */
     private void union(int p, int q) {
         int i = find(p);
